@@ -24,3 +24,15 @@ export interface ProcessStatus {
     if (!res.ok) throw new Error('Error al iniciar el proceso');
     return res.json();
   }  
+
+  export interface PendingAuth {
+    id: string;
+    name: string;
+    company: string;
+  }
+  
+  export async function fetchStatusList(): Promise<PendingAuth[]> {
+    const res = await fetch('https://TU_API_URL.com/api/pending');
+    if (!res.ok) throw new Error('Error al obtener autorizaciones pendientes');
+    return res.json();
+  }

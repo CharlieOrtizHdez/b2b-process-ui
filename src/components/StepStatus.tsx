@@ -1,4 +1,3 @@
-// src/components/StepStatus.tsx
 import React from 'react';
 import StatusBadge from './StatusBadge';
 
